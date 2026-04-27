@@ -36,7 +36,7 @@ public class ShopTypeServiceImpl extends ServiceImpl<ShopTypeMapper, ShopType> i
     public Result getList() {
         // 1. 从Redis查询JSON字符串列表
         List<String> shopTypeJsonList = stringRedisTemplate.opsForList().range("shop:type:list", 0, -1);
-
+        //你好你好你好
         // 2. Redis有数据，转成ShopType对象列表返回
         if (shopTypeJsonList != null && !shopTypeJsonList.isEmpty()) {
             List<ShopType> shopTypes = new ArrayList<>();
