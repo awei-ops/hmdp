@@ -28,7 +28,6 @@ import java.util.concurrent.TimeUnit;
 public class ShopServiceImpl extends ServiceImpl<ShopMapper, Shop> implements IShopService {
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
-
     @Override
     public Result queryById(Long id) {
         String key = "cash:shop:" + id;
